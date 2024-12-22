@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-witdh, initial -scale=1.0">
+  <title> Delivery Information </title>
+  <link rel ="stylesheet" href="style5.css">
+</head>
+
+<body>
+ 
+    <div class="container">
+    <form>
+        <h3> Delivery Information </h3>
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Email address" required>
+        <input type="text" id="phone" placeholder="Phone no." required>
+        <input type="text" id="address" placeholder="Full address" required>
+    
+
+        <textarea id="message" rows="4" placeholder="Notes"></textarea>
+        <button type="submit" onclick="openPopup()" > SUBMIT </button>
+        </form>
+       
+
+      <div class="popup" id="popup"> 
+       <img src="check.png">
+       <h2> Thank You!</h2>
+      <p> Your details has been succesfully submitted. Thanks!</p>
+      <button type="button" onclick="closePopup()"> OK </button> 
+     </div>
+
+<script>
+
+let popup = document.getElementById("popup");
+
+function openPopup(){
+  event.preventDefault();
+  popup.classList.add("open-popup");
+}
+function closePopup(){
+  popup.classList.remove("open-popup");
+  window.location.href = "Mainpage.html";
+}
+
+</script>
+
+</body>
+</html>

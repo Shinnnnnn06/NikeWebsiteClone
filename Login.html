@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>Login Page </title>
+  
+  <link rel="stylesheet" href="style.css">
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Get the login button element
+      var loginButton = document.getElementsByTagName('button')[0];
+      
+      // Set the maximum number of login attempts
+      var maxAttempts = 3;
+      
+      // Initialize the count of login attempts
+      var attemptCount = 0;
+  
+      // Add a click event listener to the login button
+      loginButton.addEventListener('click', function(event) {
+        event.preventDefault();
+  
+        // Get the username and password input fields
+        var usernameInput = document.querySelector('input[type="text"]');
+        var passwordInput = document.querySelector('input[type="password"]');
+  
+        // Check if the entered username and password are correct
+        if (usernameInput.value === 'Shaine' && passwordInput.value === '123pogi') {
+          // Redirect the user to the main page
+          window.location.href = 'Mainpage.html';
+        } else {
+          // Increment the login attempt count
+          attemptCount++;
+  
+          // Check if the maximum number of attempts has been reached
+          if (attemptCount >= maxAttempts) {
+            // Disable the login button
+            loginButton.disabled = true;
+            // Display an alert indicating the maximum attempts reached
+            alert('You have reached the maximum number of login attempts.');
+          } else {
+            // Display an alert indicating the wrong password or username and the current attempt count
+            alert('Wrong password or username. Attempt ' + attemptCount + ' of ' + maxAttempts);
+          }
+        }
+      });
+    });
+  </script>
+  
+
+</head> 
+<body>
+  <div class="box-form">
+    <div class="left">
+      <div class="overlay">
+        <h1>  B O N           </h1>
+        <h1> J O U R            </h1>
+      </div>
+    </div>
+  
+    <div class="right">
+      <h5>L O G -  I N </h5>
+      <div class="inputs">
+        <p> Bonjour! Welcome to my Nike Website,please enter your username and password. </p>
+        <input type="text" placeholder="Username">
+        <br>
+        <input type="password" placeholder="Password">
+      </div>
+      <br><br>
+      <br>
+      <button>Login</button>
+    </div>
+  </div>
+</body>
+</html>
