@@ -1,5 +1,5 @@
 Credentials: 
-username- Shaine
+username- Admin
 password- admin123
 
 Live Demo: 
